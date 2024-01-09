@@ -3,14 +3,14 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import logo from './DestinyLogo.png'; // Import the logo file
+import logo from './DestinyLogoR.png'; // Import the logo file
 import Button from '@mui/material/Button';
 
 
 function Header() {
   return (
     //update app bar margin below.
-    <AppBar position="static" sx={{ backgroundColor: '#4055A6',paddingTop:'0',paddingBottom: '0',marginTop: 0 }}>
+    <AppBar position="static" sx={{ backgroundColor: '#08123C', paddingTop: '0', paddingBottom: '0', marginTop: 0 }}>
       <Container maxWidth="xl">
         {/* <Toolbar disableGutters> */}
         <Toolbar sx={{ padding: 0, height: '4.5rem' }}>
@@ -105,7 +105,7 @@ function Header() {
           </Typography>
           <Button variant="contained" sx={{
             color: 'black',
-            backgroundColor: '#EFE2BA',
+            backgroundColor: '#D99000',
             borderRadius: '2rem',
             width: '8rem',
             fontSize: '0.9rem',
