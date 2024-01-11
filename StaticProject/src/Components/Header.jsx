@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import logo from './DestinyLogoR.png'; // Import the logo file
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+
 
 
 function Header() {
@@ -15,13 +17,15 @@ function Header() {
         {/* <Toolbar disableGutters> */}
         <Toolbar sx={{ padding: 0, height: '4.5rem' }}>
           {/* <AdbIcon sx={{ mr: 3 }} /> */}
-          <a href='#'>
+
+          <Link to="/">
             <img
               src={logo} // Use the imported logo as the source
               style={{ marginRight: 300, height: 60 }}
 
             />
-          </a>
+          </Link>
+
           <Typography
             variant="h6"
             noWrap
@@ -40,7 +44,7 @@ function Header() {
 
             }}
           >
-            Home
+            <Link to="/">Home</Link>
           </Typography>
 
           <Typography
@@ -60,7 +64,7 @@ function Header() {
               marginLeft: -20
             }}
           >
-            About Us
+            <Link to="/aboutus">About Us</Link>
           </Typography>
 
           <Typography
@@ -81,7 +85,7 @@ function Header() {
 
             }}
           >
-            Contact Us
+            <Link to="/contactus">Contact Us</Link>
           </Typography>
 
           <Typography
@@ -101,7 +105,7 @@ function Header() {
               marginLeft: -20
             }}
           >
-            Gallery
+            <Link to="/gallery">Gallery</Link>
           </Typography>
           <Button variant="contained" sx={{
             color: 'black',
@@ -117,7 +121,7 @@ function Header() {
             },
 
           }} >
-            Booking
+            <Link to="/booking">Booking</Link>
           </Button>
         </Toolbar>
       </Container>
