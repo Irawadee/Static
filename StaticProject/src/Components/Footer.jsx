@@ -11,7 +11,7 @@ export default function Footer() {
             textAlign: 'center'
             // marginTop: 'auto', // Push the footer to the bottom
         }}>
-            {`Copyright © Upbeat Code ${year}`}
+            {`Copyright © Destiny Restaurant ${year}`}
         </footer>
     );
 }
