@@ -8,8 +8,11 @@ export default function Footer() {
             backgroundColor: '#08123C',
             padding: '20px',
             color: '#FFFFFF',
-            textAlign: 'center'
-            // marginTop: 'auto', // Push the footer to the bottom
+            textAlign: 'center',
+            // the set style to make footer stay in the bottom of the browser window
+            position: 'fixed',
+            bottom: 0,
+            width: '100%'
         }}>
             {`Copyright © Destiny Restaurant ${year}`}
         </footer>
