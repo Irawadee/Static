@@ -2,15 +2,14 @@ import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 
-
-function AboutUs() {
+function NotFound() {
   return (
       <>
           <Header />
-          <div>About Us</div>
-          <Footer/>
+          <div>Not found</div>
+          <Footer />
       </>
   )
 }
 
-export default AboutUs
+export default NotFound

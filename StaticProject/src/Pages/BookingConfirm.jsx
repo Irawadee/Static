@@ -2,15 +2,14 @@ import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 
-
-function AboutUs() {
+function BookingConfirm() {
   return (
       <>
           <Header />
-          <div>About Us</div>
-          <Footer/>
+          <div>Booking Confirmation</div>
+          <Footer />
       </>
   )
 }
 
-export default AboutUs
+export default BookingConfirm
