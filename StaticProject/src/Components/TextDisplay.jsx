@@ -21,7 +21,6 @@ export default function TextDisplay({ title, content }) {
                 sx={{
                     color: '#D99000',    // Set text color
                     fontWeight: 'bold',  // Set font weight
-                    fontStyle: 'italic',  // Set font style,
                     fontFamily: 'Optima',
 
                 }}>
