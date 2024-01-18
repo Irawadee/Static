@@ -13,7 +13,7 @@ function BookingConfirm() {
         <Banner backgroundImage={bookingimage} />
       </div>
       <div>
-        <TextDisplay title="Thank You!" content="Your booking is confirmed:)" />
+        <TextDisplay title="Thank You!" content="Your booking is confirmed." />
       </div>
       <Footer />
     </>

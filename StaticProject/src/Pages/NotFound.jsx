@@ -14,7 +14,7 @@ function NotFound() {
       </div>
       <div>
         <TextDisplay title="Error 404 Not Found!"
-          content=" Sorry, we can not find the page:(" />
+          content=" Sorry, we can not find the page." />
       </div>
       <Footer />
     </>
