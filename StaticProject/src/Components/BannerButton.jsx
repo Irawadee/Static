@@ -5,7 +5,8 @@ import React from 'react'
 const BannerButton = ({ backgroundImage, buttonText, buttonLink }) => {
     const fbannerStyle = {
         position: 'relative',
-        width: '1536px',
+        width: '100%', // Use percentage for width to make it flexible
+        // width: '1536px',
         height: '600px',
         marginTop: '20px',
         backgroundImage: `url(${backgroundImage})`,
@@ -17,27 +18,34 @@ const BannerButton = ({ backgroundImage, buttonText, buttonLink }) => {
         justifyContent: 'center'
     };
 
+
+    const responsiveStyles = {
+        '@media (max-width: 768px)': {
+            height: '300px', // Adjust the height for smaller screens
+        },
+    };
+
     const buttonStyle = {
+        // To make the button flexible when adjust the browser screen use the approach of this. 
+        //* Make the component position to be absolute then give the value of direction ex. bottom and right in px.
+        // position: 'absolute',
+        // bottom: '10px', // Adjust the bottom position as needed
+        // right: '80px', // Adjust the right position as needed
+
+        position: 'absolute',
+        bottom: '10px', // Adjust the bottom position as needed
+        right: '80px', // Adjust the right position as needed
         backgroundColor: '#D99000',
         color: 'black',
         borderRadius: '2rem',
-        padding: '10px 35px',
+        padding: '15px 40px',
         fontSize: '1rem',
         textDecoration: 'none',
         fontWeight: 'bold',
-        marginTop: '500px',
-        marginLeft: '1250px',
-        width: '120px', // size of button
-        height: '30px', // size of button
-        // command set to make the font center properly in button field 
-        textAlign: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
-
     };
 
-    return <div style={fbannerStyle}>
+
+    return <div style={{...fbannerStyle,...responsiveStyles}}>    
         {buttonText && (
             <a href={buttonLink} style={buttonStyle}>
                 {buttonText}

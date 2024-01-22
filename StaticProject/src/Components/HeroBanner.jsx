@@ -10,7 +10,8 @@ import Heroimage from './HBanner.jpg'
 const HeroBanner = ({ buttonText, buttonLink }) => {
     const herobannerStyle = {
         position: 'relative',
-        width: '1536px',
+        width: '100%',
+        // width: '1536px',
         height: '610px',
         backgroundImage: `url(${Heroimage})`,
         backgroundPosition: 'center',
@@ -24,22 +25,22 @@ const HeroBanner = ({ buttonText, buttonLink }) => {
 
 
     const buttonStyle = {
+        // To make the button flexible when adjust the browser screen use the approach of this. 
+        //* Make the component position to be absolute then give the value of direction ex. bottom and right in px.
+        // position: 'absolute',
+        // bottom: '10px', // Adjust the bottom position as needed
+        // right: '80px', // Adjust the right position as needed
+
+        position: 'absolute',
+        bottom: '10px', // Adjust the bottom position as needed
+        left: '80px', // Adjust the right position as needed
         backgroundColor: '#D99000',
         color: 'black',
         borderRadius: '2rem',
-        padding: '10px 35px',
+        padding: '15px 40px',
         fontSize: '1rem',
         textDecoration: 'none',
-        marginTop: '500px',
-        marginLeft: '80px',
-        width: '120px',
-        height: '30px',
         fontWeight: 'bold',
-        // command set to make the font center properly in button field 
-        textAlign: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
         
     };
 
