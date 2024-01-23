@@ -17,10 +17,12 @@ function AboutUs() {
         <Banner backgroundImage={aboutimage} />
       </div>
       <div >
-        <PhotoBoxLeft image={Establisher} alt='Establisher' topic='Description' description='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five' />
+        <PhotoBoxLeft image={Establisher} alt='Establisher' topic='Description' description='Lady Silas Cunningham, The origin of the restaurant owner. &nbsp;&nbsp;She designed and managed the premises in 1895. &nbsp;She and her close acquaintances, Lilla, Phoebe, and Emmeline created the exclusive and traditional menus for the business.
+&nbsp;Lady Silas took care of Destiny restaurant for 45 years until she passed the property to her heirs. This is the precious legacy of the Cunninghams. 
+' />
       </div>
       <div>
-        <PhotoBoxRight image={Heir} alt='Heir' topic='Description' description='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five' />
+        <PhotoBoxRight image={Heir} alt='Heir' topic='Description' description='Aaron Cunningham, He has had a passion for food creation and restaurant business management since he was young.&nbsp; He joined best culinary school in Germany, Lemperhaus in 2005 and got master degree in hospitality management from Leeds Beckett University in 2007. &nbsp;He takes over the restaurant since 2009.'/>
       </div>
       <Footer />
     </>
