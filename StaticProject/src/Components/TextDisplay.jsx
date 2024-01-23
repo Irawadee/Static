@@ -22,6 +22,7 @@ export default function TextDisplay({ title, content }) {
                     color: '#D99000',    // Set text color
                     fontWeight: 'bold',  // Set font weight
                     fontFamily: 'Optima',
+                    width:'100%'
 
                 }}>
                 {/* // specify the prop in use */}

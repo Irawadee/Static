@@ -1,5 +1,5 @@
 import React from 'react'
-import Heroimage from './HBanner.jpg'
+import Heroimage from '../Images/HBanner.jpg'
 
 
 // The new technique of style-contained component create without function ,

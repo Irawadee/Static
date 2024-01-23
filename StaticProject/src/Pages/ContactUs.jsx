@@ -2,8 +2,8 @@ import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import Banner from '../Components/Banner'
-import contactusimage from '../Components/ContactUs.jpg'
-import ContextBox from '../Components/ContextBox'
+import contactusimage from '../Images/ContactUs.jpg'
+import ContactBox from '../Components/ContactBox'
 import MapIframe from '../Components/MapIframe'
 
 function ContactUs() {
@@ -14,7 +14,7 @@ function ContactUs() {
         <Banner backgroundImage={contactusimage} />
       </div>
       <div>
-        <ContextBox />
+        <ContactBox />
       </div>
       <div>
         <MapIframe />

@@ -12,7 +12,8 @@ const buttonStyles = {
     color: 'black',
     backgroundColor: '#D99000',
     borderRadius: '2rem',
-    width: '8rem',
+    width: '20%',
+    // width: '8rem',
     fontSize: '0.9rem',
     fontFamily: 'Optima',
     fontWeight: 400,
@@ -20,9 +21,10 @@ const buttonStyles = {
     marginTop: 5,
 
     '@media (max-width: 1000px)': {
-        marginLeft: 35,
-        width: '6rem',
-        fontSize: '0.7rem',
+        marginLeft: 30,
+        // width: '6rem',
+        width: '20%',
+        fontSize: '0.9rem',
     },
 
     '&:hover': {
@@ -50,11 +52,11 @@ function MainForm() {
                     height: 700,
                     mx: 'auto', // Center horizontally
                     my: 'auto', // Center vertically
-                    
+
                 },
             }}
         >
-            <Paper elevation={0} sx={{ backgroundColor: '#F3F0EB', p: 2, borderRadius: 5, border: '0.5px groove #000000', maxWidth: '700px' }}>
+            <Paper elevation={0} sx={{ backgroundColor: '#F3F0EB', p: 2, borderRadius: 5, border: '0.5px groove #000000', width: '50%', maxWidth: '700px' }}>
                 <Form >
                     <Typography variant="h4"
                         sx={{
@@ -68,8 +70,8 @@ function MainForm() {
                         Booking Form
                     </Typography>
                     <TextLabel> Name
-                        
-                        <TextField sx={{ borderRadius: '80px', marginLeft: '50px', width: '300px' }}
+                        {/* width: '300px', */}
+                        <TextField sx={{ borderRadius: '80px', marginLeft: '50px', width: '50%' }}
                             required
                             id="outlined-required"
                             label="Required"
@@ -86,7 +88,7 @@ function MainForm() {
 
 
                     <TextLabel> Email
-                        <TextField sx={{ borderRadius: '80px', marginLeft: '50px', width: '300px' }}
+                        <TextField sx={{ borderRadius: '80px', marginLeft: '50px', width: '50%' }}
                             required
                             id="outlined-required"
                             label="Required"
@@ -103,7 +105,7 @@ function MainForm() {
 
                     <TextLabel >
                         Tel.
-                        <TextField sx={{ borderRadius: '80px', marginLeft: '65px', width: '300px' }}
+                        <TextField sx={{ borderRadius: '80px', marginLeft: '65px', width: '50%' }}
                             required
                             id="outlined-required"
                             label="Required"
@@ -118,7 +120,7 @@ function MainForm() {
                         />
                     </TextLabel>
                     <TextLabel> Date :
-                        <TextField sx={{ borderRadius: '80px', marginLeft: '45px', marginRight: '30px', width: '150px' }}
+                        <TextField sx={{ borderRadius: '80px', marginLeft: '45px', marginRight: '30px', width: '25%' }}
                             required
                             id="outlined-required"
                             label="Required"
@@ -134,7 +136,7 @@ function MainForm() {
 
                         Time :
 
-                        <TextField sx={{ borderRadius: '80px', marginLeft: '45px', width: '150px' }}
+                        <TextField sx={{ borderRadius: '80px', marginLeft: '45px', width: '25%' }}
                             required
                             id="outlined-required"
                             label="Required"
@@ -151,8 +153,8 @@ function MainForm() {
                     </TextLabel>
                     <TextLabel > Additional Request : </TextLabel>
                     <div>
-
-                        <TextField sx={{ marginLeft: '80px', width: '520px', marginTop: '-20px' }}
+                        {/* width: '520px', */}
+                        <TextField sx={{ marginLeft: '80px', width: '80%', marginTop: '-20px' }}
                             required
                             id="outlined-multiline-static"
                             multiline
