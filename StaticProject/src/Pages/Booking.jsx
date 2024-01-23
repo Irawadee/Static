@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import Banner from '../Components/Banner'
-import bookingimage from '../Components/Booking.jpg'
+import bookingimage from '../Images/Booking.jpg'
 import MainForm from '../Components/MainForm'
 
 
