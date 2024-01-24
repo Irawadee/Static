@@ -5,6 +5,7 @@ import Banner from '../Components/Banner'
 import contactusimage from '../Images/ContactUs.jpg'
 import ContactBox from '../Components/ContactBox'
 import MapIframe from '../Components/MapIframe'
+import { margin } from '@mui/system'
 
 function ContactUs() {
   return (
@@ -13,7 +14,7 @@ function ContactUs() {
       <div>
         <Banner backgroundImage={contactusimage} />
       </div>
-      <div>
+      <div >
         <ContactBox />
       </div>
       <div>
