@@ -7,7 +7,8 @@ export default function Footer() {
         <div style={{
             display: 'flex',
             flexDirection: 'column',
-            minHeight: '0vh',  // Set the minimum height of the container of the viewport height, this control how much space between 
+            minHeight: '5vh', 
+            width:'100%' // Set the minimum height of the container of the viewport height, this control how much space between 
             // previous component and footer
         }}>
 

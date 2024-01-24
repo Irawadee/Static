@@ -5,7 +5,7 @@ import { Typography } from '@mui/material';
 
 function PhotoBoxLeft({ image, alt, topic, description }) {
     return (
-
+        <div style={{ marginLeft: '50px' }}>
         <Box
             sx={{
                 position: 'relative', // Use 'relative' if you want it to be positioned relative to its normal position  
@@ -14,13 +14,14 @@ function PhotoBoxLeft({ image, alt, topic, description }) {
                 flexWrap: 'wrap',
                 '& > :not(style)': {
                     m: 5, // Adjust margin between component in box (paper)
-                    width: '100%', // Use percentage for width to make it flexible
+                    width: '103.5%', // Use percentage for width to make it flexible
                     maxWidth: '550px', // Limit the maximum width if needed
                     minWidth: '250px', // set minWidth to allow limited flexibility when adjust window.
                     height: '500px'
 
                 },
                 '@media (min-width: 300px)': {
+                    left: -50,
                     '& > :not(style)': {
                         minWidth: '400px', // Increase minWidth for larger screens
                     },
@@ -30,7 +31,7 @@ function PhotoBoxLeft({ image, alt, topic, description }) {
             {/* The Style command set -->  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' will vertically center the content (image and text) within each Paper. */}
             {/* background:'#F3F0EB' */}
             <Paper elevation={0} sx={{ width: '100%', height: '100%', display: 'flex', background: '#F3F0EB', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            {/* objectFit: 'contain' enable the display photo to fully show without crop, but it will leave some space among the box to adjust} */}
+                {/* objectFit: 'contain' enable the display photo to fully show without crop, but it will leave some space among the box to adjust} */}
                 <img src={image} alt={alt} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Paper>
 
@@ -40,8 +41,8 @@ function PhotoBoxLeft({ image, alt, topic, description }) {
                         color: '#D99000',    // Set text color
                         fontWeight: 'bold',  // Set font weight
                         fontFamily: 'Optima',
-                       
-                       
+
+
                     }}> {topic}</Typography>
 
 
@@ -51,14 +52,14 @@ function PhotoBoxLeft({ image, alt, topic, description }) {
                         fontFamily: 'Optima',
                         fontSize: '20px',
                         my: 5,
-                        mx:5,
-                        width:'80%'
+                        mx: 5,
+                        width: '80%'
                     }}> {description}
-                    
+
                 </Typography>
             </Paper>
         </Box>
-
+</div>
     );
 }
 export default PhotoBoxLeft
