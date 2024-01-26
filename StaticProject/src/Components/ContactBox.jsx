@@ -104,10 +104,10 @@ function ContactBox() {
                         <br /><br />
 
                         <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '10px' }}>
-
-                            <img src={fbimage} alt="fbicon" style={{ width: '10%', height: 'auto' }} />
-                            <img src={iimage} alt="igicon" style={{ width: '10%', height: 'auto' }} />
-                            <img src={timage} alt="twittericon" style={{ width: '10%', height: 'auto' }} />
+                            {/* // target="_blank" to open link in new tab,  rel="noopener noreferrer" for external web link security*/}
+                            <a href="https://www.facebook.com/restaurantnz/" target="_blank" rel="noopener noreferrer"><img src={fbimage} alt="fbicon" style={{ width: '30%', height: 'auto' }} /></a>
+                            <a href="https://www.instagram.com/restaurantnz/?ref=Mini%20Instagram&hl=af" target="_blank" rel="noopener noreferrer"><img src={iimage} alt="igicon" style={{ width: '30%', height: 'auto' }} /></a>
+                            <a href="https://twitter.com/restaurantnz?lang=en" target="_blank" rel="noopener noreferrer"><img src={timage} alt="twittericon" style={{ width: '30%', height: 'auto' }} /></a>
                         </div>
                     </Typography>
 
