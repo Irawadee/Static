@@ -43,7 +43,7 @@ export default function TextDisplay({ title, content }) {
                 }}>
                 {/* // specify the prop in use */}
 
-                {title && <>{title} <br /><br /></>}
+                {title && <>{title} <br /><br />   </>}
                 {content}
 
             </Typography>
