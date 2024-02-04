@@ -11,15 +11,13 @@ function Home() {
     return (
         <>
             <Header />
-            <div>
-                <HeroBannerComponent />
-            </div>
-            <div>
-                <BannerButton backgroundImage={BackgroundImage1} buttonText="About Us →" buttonLink="/aboutus" />
-            </div>
-            <div>
-                <FinishBanner backgroundImage={BackgroundImage2} buttonText="Contact Us →" buttonLink="/contactus" />
-            </div>
+
+            <HeroBannerComponent />
+
+            <BannerButton backgroundImage={BackgroundImage1} buttonText="About Us →" buttonLink="/aboutus" />
+
+            <FinishBanner backgroundImage={BackgroundImage2} buttonText="Contact Us →" buttonLink="/contactus"  />
+
 
             <Footer />
         </>

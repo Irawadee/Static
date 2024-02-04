@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const FinishBanner = ({ backgroundImage,buttonText, buttonLink }) => {
+const FinishBanner = ({ backgroundImage, buttonText, buttonLink }) => {
+    const [isHovered, setHovered] = useState(false);
+
     const fbannerStyle = {
         // To make banner flexible when adjust the browser, use width in % unit and make the position relative.
         position: 'relative',
         width: '100%', // Use percentage for width to make it flexible
         // width: '1536px',
         height: '600px',
-        marginTop: '20px',
         backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
@@ -27,7 +28,7 @@ const FinishBanner = ({ backgroundImage,buttonText, buttonLink }) => {
         position: 'absolute',
         bottom: '10px', // Adjust the bottom position as needed
         left: '80px', // Adjust the right position as needed
-        backgroundColor: '#D99000',
+        backgroundColor: isHovered ? '#A9A9A9' : '#D99000',
         color: 'black',
         borderRadius: '2rem',
         padding: '15px 40px',
@@ -36,9 +37,14 @@ const FinishBanner = ({ backgroundImage,buttonText, buttonLink }) => {
         fontWeight: 'bold',
     };
 
-    return <div style={{...fbannerStyle,...responsiveStyles}}>
+    return <div style={{ ...fbannerStyle, ...responsiveStyles }}>
         {buttonText && (
-            <a href={buttonLink} style={buttonStyle}>
+            <a
+                href={buttonLink}
+                style={buttonStyle}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+            >
                 {buttonText}
             </a>
         )}

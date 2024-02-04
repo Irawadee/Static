@@ -18,18 +18,10 @@ function Gallery() {
   return (
     <>
       <Header />
-      <div>
         <Banner backgroundImage={galleryimage} />
-      </div>
-      <div>
         <PhotoBox imageName={imageNameToDisplaySet1} alt={altText} />
-      </div>
-      <div>
         <PhotoBox imageName={imageNameToDisplaySet2} alt={altText} />
-      </div>
-      <div>
         <PhotoBox imageName={imageNameToDisplaySet3} alt={altText} />
-      </div>
       <Footer />
     </>
   )

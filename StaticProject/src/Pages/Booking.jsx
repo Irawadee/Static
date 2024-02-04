@@ -10,9 +10,7 @@ function Booking() {
   return (
     <>
       <Header />
-      <div>
         <Banner backgroundImage={bookingimage} />
-      </div>
       <div style={{ marginTop: '50px', marginBottom: '50px' }} >
         <MainForm/>
       </div>

@@ -10,7 +10,6 @@ import G6 from '../Images/Gallery6.jpg'
 import G7 from '../Images/Gallery7.jpg'
 import G8 from '../Images/Gallery8.jpg'
 import G9 from '../Images/Gallery9.jpg'
-import { margin } from '@mui/system';
 
 
 // function to enable the array photo display as prop. 
@@ -53,10 +52,11 @@ function getImageComponent(imageName, alt, index) {
             return (
                 <img key={index} src={G9} alt={`${alt} Galleryphoto 9`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             );
-            
+
         default:
             return null;
     }
+
 }
 
 
@@ -64,39 +64,45 @@ function PhotoBox({ imageName, alt }) {
     return (
 
         <div style={{ marginLeft: '50px' }}>
-        <Box
-            sx={{
-                position: 'relative', // Use 'relative' if you want it to be positioned relative to its normal position  
-                left: '50px', // adjust the box position in pages via direction value in 'px' , it effect the paper position too.
-                display: 'flex',
-                flexWrap: 'wrap',
-                '& > :not(style)': {
-                    m: 5, // Adjust margin between component in box (paper)
-                    width: '100%', // Use percentage for width to make it flexible
-                    maxWidth: '250px', // Limit the maximum width if needed
-                    minWidth: '250px', // set minWidth to allow limited flexibility when adjust window.
-                    height: '380px'
-
-                },
-                '@media (min-width: 300px)': {
-                    left:'-20px',
+            <Box
+                sx={{
+                    position: 'relative', // Use 'relative' if you want it to be positioned relative to its normal position  
+                    left: '50px', // adjust the box position in pages via direction value in 'px' , it effect the paper position too.
+                    display: 'flex',
+                    flexWrap: 'wrap',
                     '& > :not(style)': {
-                        minWidth: '400px', // Increase minWidth for larger screens
+                        m: 5, // Adjust margin between component in box (paper)
+                        width: '100%', // Use percentage for width to make it flexible
+                        maxWidth: '250px', // Limit the maximum width if needed
+                        minWidth: '250px', // set minWidth to allow limited flexibility when adjust window.
+                        height: '380px'
+
                     },
-                },
-            }}
-        >
-            {imageName.map((imageName, index) => (
+                    '@media (min-width: 300px)': {
+                        left: '-20px',
+                        '& > :not(style)': {
+                            minWidth: '400px', // Increase minWidth for larger screens
+                        },
+                    },
+                }}
+            >
+                {imageName.map((imageName, index) => (
 
-                <Paper key={index} sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                    <Paper key={index} sx={{
+                        width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                        '&:hover': {
+                            // Add your hover styles here
+                            filter: 'grayscale(50%)',
+                        },
+                    }}>
 
-                    {/* objectFit: 'contain' enable the display photo to fully show without crop, but it will leave some space among the box to adjust} */}
+                        {/* objectFit: 'contain' enable the display photo to fully show without crop, but it will leave some space among the box to adjust} */}
 
-                    {getImageComponent(imageName, alt, index)}
+                        {getImageComponent(imageName, alt, index)}
 
-                </Paper>
-            ))}
-        </Box>
+                    </Paper>
+                ))}
+            </Box>
         </div>
     )
 }

@@ -11,15 +11,9 @@ function ContactUs() {
   return (
     <>
       <Header />
-      <div>
-        <Banner backgroundImage={contactusimage} />
-      </div>
-      <div >
-        <ContactBox />
-      </div>
-      <div>
-        <MapIframe />
-      </div>
+      <Banner backgroundImage={contactusimage} />
+      <ContactBox />
+      <MapIframe />
       <Footer />
     </>
   )

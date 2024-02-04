@@ -21,7 +21,7 @@ const Banner = ({ backgroundImage }) => {
 
     // 2. create responsive styles
     const responsiveStyles = {
-        '@media (max-width: 768px)': {
+        '@media (maxWidth: 768px)': {
             height: '300px', // Adjust the height for smaller screens
         },
     };

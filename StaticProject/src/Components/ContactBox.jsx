@@ -9,15 +9,16 @@ import { margin } from '@mui/system';
 
 function ContactBox() {
     return (
-        <div style={{ margin: '100px' }}>
+        <div style={{ margin: 'auto' }}>
             <Box
                 sx={{
                     position: 'relative', // Use 'relative' if you want it to be positioned relative to its normal position  
-                    left: '120px', // adjust the box position in pages via direction value in 'px' , it effect the paper position too.
+                    alignContent: 'center',
+                    justifyContent: 'center',
                     display: 'flex',
                     flexWrap: 'wrap',
                     '& > :not(style)': {
-                        m: 5, // Adjust margin between component in box (paper)
+                        m: '50px', // Adjust margin between component in box (paper)
                         width: '100%', // Use percentage for width to make it flexible
                         maxWidth: '550px', // Limit the maximum width if needed
                         minWidth: '250px', // set minWidth to allow limited flexibility when adjust window.
