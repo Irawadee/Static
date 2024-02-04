@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
@@ -8,37 +8,44 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { Form } from 'react-router-dom';
 
-const buttonStyles = {
-    color: 'black',
-    backgroundColor: '#D99000',
-    borderRadius: '2rem',
-    width: '20%',
-    // width: '8rem',
-    fontSize: '0.9rem',
-    fontFamily: 'Optima',
-    fontWeight: 400,
-    marginLeft: 35,
-    marginTop: 5,
-
-    '@media (max-width: 1000px)': {
-        marginLeft: 30,
-        // width: '6rem',
-        width: '20%',
-        fontSize: '0.9rem',
-    },
-
-    '&:hover': {
-        backgroundColor: '#D99000',
-    },
-    '& a': {
-        color: 'inherit',
-        textDecoration: 'none',
-    },
-};
-
 // The date picker library can not be used although install the lates version of the packages, use optional textfield instead  
 
 function MainForm() {
+
+    const [isHovered, setHovered] = useState(false);
+
+
+    const buttonStyles = {
+        color: 'black',
+        backgroundColor:'#D99000',
+        borderRadius: '2rem',
+        width: '20%',
+        // width: '8rem',
+        fontSize: '0.9rem',
+        fontFamily: 'Optima',
+        fontWeight: 400,
+        marginLeft: 35,
+        marginTop: 5,
+
+        '@media (max-width: 1000px)': {
+            marginLeft: 30,
+            // width: '6rem',
+            width: '20%',
+            fontSize: '0.9rem',
+        },
+
+        '&:hover': {
+            backgroundColor: '#A9A9A9', // Color on hover
+        },
+
+        '& a': {
+            color: 'inherit',
+            textDecoration: 'none',
+        },
+
+
+    };
+
     return (
         <Box
             sx={{
@@ -71,16 +78,26 @@ function MainForm() {
                     </Typography>
                     <TextLabel> Name
                         {/* width: '300px', */}
-                        <TextField sx={{ borderRadius: '80px', marginLeft: '50px', width: '50%' }}
+                        
+                        <TextField sx={{
+                            borderRadius: '80px', marginLeft: '50px', width: '50%',
+                            '& label': {
+                                textAlign: 'center', // Center the label text
+                                alignItems:'center',
+                                padding: 'auto ',
+                                margin:'auto' // Adjust the padding as needed
+                            },
+                        }}
                             required
                             id="outlined-required"
                             label="Required"
                             // some style attribute can not be specified in 'sx' so you have to style it individually in their own material ui 
                             // style prop
                             InputProps={{
-                                style: {
+                                sx: {
                                     borderRadius: '30px',
-                                    height: '40px'
+                                    height: '40px',
+                                    padding:'0px'
                                 },
                             }}
                         />
@@ -170,7 +187,12 @@ function MainForm() {
                             }}
                         />
                     </div>
-                    <Button variant="contained" sx={buttonStyles}>
+                    <Button
+                        variant="contained"
+                        sx={buttonStyles}
+                        onMouseEnter={() => setHovered(true)}
+                        onMouseLeave={() => setHovered(false)}
+                    >
                         <Link to="/bookingconfirm">Submit</Link>
                     </Button>
                 </Form>

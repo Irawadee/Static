@@ -1,5 +1,6 @@
-import React from 'react'
 import Heroimage from '../Images/HBanner.jpg'
+import React, { useState } from 'react';
+
 
 
 // The new technique of style-contained component create without function ,
@@ -8,6 +9,9 @@ import Heroimage from '../Images/HBanner.jpg'
 
 // create style-contained component create without function
 const HeroBanner = ({ buttonText, buttonLink }) => {
+
+    const [isHovered, setHovered] = useState(false);
+
     const herobannerStyle = {
         position: 'relative',
         width: '100%',
@@ -34,20 +38,29 @@ const HeroBanner = ({ buttonText, buttonLink }) => {
         position: 'absolute',
         bottom: '10px', // Adjust the bottom position as needed
         left: '80px', // Adjust the right position as needed
-        backgroundColor: '#D99000',
-        color: 'black',
+        backgroundColor: isHovered ? '#A9A9A9' :'#D99000',
+        color:'black',
         borderRadius: '2rem',
         padding: '15px 40px',
         fontSize: '1rem',
         textDecoration: 'none',
         fontWeight: 'bold',
-        
+
+        '&:hover': {
+            color: '#D99000', // Change to your desired hover color
+        },
+
     };
 
     return (
         <div style={herobannerStyle}>
             {buttonText && (
-                <a href={buttonLink} style={buttonStyle}>
+                <a
+                    href={buttonLink}
+                    style={buttonStyle}
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}
+                >
                     {buttonText}
                 </a>
             )}

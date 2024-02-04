@@ -12,6 +12,8 @@ function PhotoBoxRight({ image, alt, topic, description }) {
                     left: '120px', // adjust the box position in pages via direction value in 'px' , it effect the paper position too.
                     display: 'flex',
                     flexWrap: 'wrap',
+                    justifyContent: 'center',
+                    alignItems:'center',
                     '& > :not(style)': {
                         m: 5, // Adjust margin between component in box (paper)
                         width: '103.5%', // Use percentage for width to make it flexible

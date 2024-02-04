@@ -11,6 +11,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 
+
 function Header() {
 
   const isMobile = useMediaQuery('(max-width: 500px)');
@@ -51,7 +52,31 @@ function Header() {
           {isMobile ? null : (
             // Links for Desktop
             <>
-              <Typography variant="h6" noWrap sx={linkStyles}>
+              <Typography variant="h6" noWrap sx={{
+                flexGrow: 1,
+                fontFamily: 'Optima',
+                fontWeight: 500,
+                letterSpacing: '.1rem',
+                color: 'inherit',
+                textDecoration: 'none',
+                fontSize: '1rem', // rem unit is the most accurate for every responsive proposes.
+                textAlign: 'center',
+                marginLeft: '250px',
+                marginRight: '-60px',
+
+
+                '& a': {
+                  color: 'inherit',
+                  textDecoration: 'none',
+
+                  '&:hover': {
+                    color: '#D99000', // Change to your desired hover color
+                  },
+                },
+
+
+
+              }}>
                 <Link to="/">Home</Link>
               </Typography>
 
@@ -128,6 +153,7 @@ const linkStylesmobile = {
   padding: 2,
 
 
+
   '& a': {
     color: 'inherit',
     textDecoration: 'none',
@@ -137,14 +163,24 @@ const linkStylesmobile = {
 
 
 const linkStyles = {
-  flexGrow: 1,
+  flexGrow: 0.5,
   fontFamily: 'Optima',
   fontWeight: 500,
   letterSpacing: '.1rem',
   color: 'inherit',
   textDecoration: 'none',
   fontSize: '1rem', // rem unit is the most accurate for every responsive proposes.
-  marginLeft: 10,
+  textAlign: 'center',
+
+
+  '& a': {
+    color: 'inherit',
+    textDecoration: 'none',
+    '&:hover': {
+      color: '#D99000', // Change to your desired hover color
+    },
+  },
+
 
   // we can put extra css style for specific tag element to combine within the custom styles.
   // extra css style
@@ -154,11 +190,9 @@ const linkStyles = {
     width: '6rem',
     fontSize: '0.7rem',
   },
-  //extra css style
-  '& a': {
-    color: 'inherit',
-    textDecoration: 'none',
-  },
+
+
+
 };
 
 
@@ -189,7 +223,7 @@ const buttonStyles = {
   fontSize: '0.9rem',
   fontFamily: 'Optima',
   fontWeight: 400,
-  marginLeft: 10,
+  marginLeft: '10px',
 
   '@media (max-width: 1000px)': {
     // Adjust styles for smaller screens
@@ -199,7 +233,7 @@ const buttonStyles = {
   },
 
   '&:hover': {
-    backgroundColor: '#D99000',
+    backgroundColor: '#A9A9A9',
   },
   '& a': {
     color: 'inherit',
